@@ -42,7 +42,7 @@ export abstract class Model {
   }
 
   save(): void {
-    this.response = Object.assign(this.response, this.changes);
+    this.response = { ...this.response, ...this.changes };
     this.clear();
   }
 }

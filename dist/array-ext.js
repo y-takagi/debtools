@@ -1,26 +1,28 @@
 "use strict";
 Array.prototype.divideBy = function (size) {
+    var _this = this;
     if (size > 0) {
-        const newArray = [];
-        Array.from(Array(this.length).keys()).forEach(index => {
+        var newArray_1 = [];
+        Array.from(Array(this.length).keys()).forEach(function (index) {
             if (index % size === 0) {
-                newArray.push([]);
+                newArray_1.push([]);
             }
-            newArray[newArray.length - 1].push(this[index]);
+            newArray_1[newArray_1.length - 1].push(_this[index]);
         });
-        return newArray;
+        return newArray_1;
     }
     else {
         return this;
     }
 };
 Array.prototype.flatten = function () {
-    return this.reduce((a, b) => a.concat(Array.isArray(b) ? b.flatten() : b), []);
+    return this.reduce(function (a, b) { return a.concat(Array.isArray(b) ? b.flatten() : b); }, []);
 };
 Array.prototype.uniq = function () {
-    return this.filter((value, index, self) => value && self.indexOf(value) === index);
+    return this.filter(function (value, index, self) { return value && self.indexOf(value) === index; });
 };
 Array.prototype.uniqBy = function (prop) {
-    const values = this.map(o => o[prop]);
-    return values.uniq().map(v => this.find(o => o[prop] === v));
+    var _this = this;
+    var values = this.map(function (o) { return o[prop]; });
+    return values.uniq().map(function (v) { return _this.find(function (o) { return o[prop] === v; }); });
 };
