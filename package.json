@@ -1,0 +1,15 @@
+{
+  "name": "debtools",
+  "version": "1.0.0",
+  "description": "Provide collection of js utilities.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "author": "y-takagi",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "typescript": "~2.4.2"
+  }
+}
