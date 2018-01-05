@@ -7,8 +7,13 @@
     "baseUrl": ".",
     "strict": true,
     "suppressImplicitAnyIndexErrors": true,
+    "sourceMap": true,
     "lib": [
       "es2017"
     ]
-  }
+  },
+  "exclude": [
+    "node_modules",
+    "**/*.spec.ts"
+  ]
 }

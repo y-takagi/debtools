@@ -26,3 +26,4 @@ Array.prototype.uniqBy = function (prop) {
     var values = this.map(function (o) { return o[prop]; });
     return values.uniq().map(function (v) { return _this.find(function (o) { return o[prop] === v; }); });
 };
+//# sourceMappingURL=array-ext.js.map
